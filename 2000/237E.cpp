@@ -97,7 +97,7 @@ int main() {
         for(int j = 0; j < str.size(); j++) mcmf.addEdge(i, n + str[j] - 'a' + 1, 1, 0);
     }
     pair<int, int> res = mcmf.getMCMF(s, t);
-    if(res.first < strsize) cout << -1;
+    if(res.first != strsize) cout << -1;
     else cout << res.second;
     return 0;
 }
